@@ -11,7 +11,7 @@ pip install --user -r requirements.txt
 ### Running it
 Either double-click the screen-shawty.py file or run it from CLI with
 ```
-python screen-shawty
+python screen-shawty.py
 ```
 Once the application is running, press the "Start" button to begin the recording. To take a screenshot, press the print screen key on your keyboard as normal. Currently, images will be automatically saved to `~/Pictures/Screen Shot TIMESTAMP.png` (where `~` represents your home directory).
 ### Troubles with the app
