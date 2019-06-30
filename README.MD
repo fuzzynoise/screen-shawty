@@ -27,14 +27,14 @@ Once the application is running, press the green "Start" button to begin the rec
 [Return to top](#screen-shawty)
 ### Known bugs
 On Windows 10 display scaling can cause the screen capture to only grab a partial image. This can potentially happen with any display scale other than 100%. As a workaround:
-'''
+```
 Go to the Windows Start Menu.
 Choose Settings.
 Select System.
 Select Display.
 Look for Scale and layout.
 Set it to 100%.
-'''
+```
 
 [Return to top](#screen-shawty)
 ### Troubles with the app
