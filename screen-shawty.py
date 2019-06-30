@@ -1,14 +1,20 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
 import keyboard
+
 from PIL import ImageGrab
+
 from time import sleep
 from time import time
+
 from pathlib import Path
 
 import tkinter as tk
 
+VERSION = '0.01b'
 running = False # The application is stopped/not listening in background.
-homedir = str(Path.home())
+
+#################
 
 def start_stop():
     global running
@@ -21,9 +27,18 @@ def start_stop():
         toggle_button.config(text="Start", bg='green')
 
 def take_screen_shot():
-    global homedir
     current_time = str(time()).replace('.','')
-    save_path = f"{homedir}\\Pictures\\Screen Shot {current_time}.png"
+    picture_dir = Path.home().joinpath('Pictures')
+
+    # State of the art error handling!
+    if not picture_dir.exists():
+        try:
+            picture_dir.mkdir(parents=True, exist_ok=True)
+        except Exception as e:
+            print(e)
+
+    save_path = picture_dir.joinpath(f'Screen Shot {current_time}.png')
+
     screen_shot = ImageGrab.grab()
     screen_shot.save(save_path)
 
@@ -33,8 +48,11 @@ def shot_loop():
             take_screen_shot()
     root.after(150, shot_loop)
 
+#################
+
 root = tk.Tk()
-root.title("screen-shawty")
+
+root.title(f"screen-shawty {VERSION}")
 root.geometry("250x250")
 
 app = tk.Frame(root)
