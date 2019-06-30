@@ -1,3 +1,5 @@
+Check the [README](README.MD) for more!
+
 ## 0.01b (June 30, 2019)
 
   - Beta version now available.
