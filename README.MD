@@ -26,13 +26,15 @@ Once the application is running, press the green "Start" button to begin the rec
 
 [Return to top](#screen-shawty)
 ### Known bugs
-On Windows 10 display scaling can cause the screen capture to only grab a partial image. This can potentially happen with any display scale other than 100%. As a workaround:
+  - Proper Linux is not supported yet.
+  - When multiple displays are connected there can be some wonky behavior.
+  - On Windows 10: display scaling can cause a partial ImageGrab. This can potentially happen with any display scale other than 100%. As a workaround try:
 ```
 Go to the Windows Start Menu.
 Choose Settings.
 Select System.
 Select Display.
-Look for Scale and layout.
+Look for Scale and Layout.
 Set it to 100%.
 ```
 
