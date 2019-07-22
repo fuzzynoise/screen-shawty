@@ -35,12 +35,6 @@ import tkinter as tk
 
 #################
 
-VERSION = '0.02b' # TODO: __init__
-POLL_DELAY = 150 # ~6.66 polls for keyboard per second.
-running = False # Is the application polling keyboard input?
-
-#################
-
 def start_stop():
     global running
 
@@ -81,15 +75,25 @@ def shot_loop():
 
 #################
 
+VERSION = '0.03b' # TODO: __init__
+POLL_DELAY = 150 # ~6.66 polls for keyboard per second.
+running = False # Is the application polling keyboard input?
+
+HEIGHT = 350
+WIDTH = 350
+
 root = tk.Tk()
 
 root.title(f"screen-shawty {VERSION}")
-root.geometry("300x300")
+root.geometry(f"{WIDTH}x{HEIGHT}")
 
 app = tk.Frame(root)
 app.pack(expand=True, fill='both')
 
-toggle_button = tk.Button(app, text="Start", bg='green', font=(50), command=start_stop)
+toggle_button = tk.Button(app,
+    text="Start", bg='green', 
+    font=(1), command=start_stop
+    )
 
 toggle_button.pack(expand=True, fill='both')
 
