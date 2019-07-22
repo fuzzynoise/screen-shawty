@@ -71,7 +71,7 @@ def shot_loop():
     if is_running:
         if keyboard.is_pressed('print screen'):
             take_screen_shot()
-    root.after(POLL_DELAY, shot_loop)
+    main_frame.after(POLL_DELAY, shot_loop)
 
 #################
 
@@ -83,20 +83,20 @@ is_running = False # Is the app polling keyboard input?
 HEIGHT = 350
 WIDTH = 350
 
-root = tk.Tk()
+main_frame = tk.Tk()
 
-root.title(f"screen-shawty {VERSION}")
-root.geometry(f"{WIDTH}x{HEIGHT}")
+main_frame.title(f"screen-shawty {VERSION}")
+main_frame.geometry(f"{WIDTH}x{HEIGHT}")
 
-app = tk.Frame(root)
+app = tk.Frame(main_frame)
 app.pack(expand = True, fill = 'both')
 
-toggle_button = tk.Button(app,
-    text = "Start", bg = 'green',
+toggle_button = tk.Button(
+    app, text = "Start", bg = 'green',
     font = (1), command = start_stop
     )
 
 toggle_button.pack(expand = True, fill = 'both')
 
-root.after(POLL_DELAY, shot_loop)
-root.mainloop()
+main_frame.after(POLL_DELAY, shot_loop)
+main_frame.mainloop()
