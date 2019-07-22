@@ -35,15 +35,15 @@ import tkinter as tk
 
 #################
 
-def start_stop():
-    global running
+def start_stop(ON = 'green', OFF = 'red'):
+    global is_running
 
     if toggle_button['text'] == 'Start':
-        running = True
-        toggle_button.config(text="Stop", bg='red')
+        is_running = True
+        toggle_button.config(text = "Stop", bg = OFF)
     else:
-        running = False
-        toggle_button.config(text="Start", bg='green')
+        is_running = False
+        toggle_button.config(text = "Start", bg = ON)
 
 def take_screen_shot():
     # time() returns a float, but we need to use it in a filename
@@ -55,7 +55,7 @@ def take_screen_shot():
     # State of the art error handling!
     if not picture_dir.exists():
         try:
-            picture_dir.mkdir(parents=True, exist_ok=True)
+            picture_dir.mkdir(parents = True, exist_ok = True)
         except Exception as e:
             print(e) #TODO: implement logging module
 
@@ -68,7 +68,7 @@ def take_screen_shot():
     sleep(0.2)
 
 def shot_loop():
-    if running:
+    if is_running:
         if keyboard.is_pressed('print screen'):
             take_screen_shot()
     root.after(POLL_DELAY, shot_loop)
@@ -77,7 +77,8 @@ def shot_loop():
 
 VERSION = '0.03b' # TODO: __init__
 POLL_DELAY = 150 # ~6.66 polls for keyboard per second.
-running = False # Is the application polling keyboard input?
+
+is_running = False # Is the app polling keyboard input?
 
 HEIGHT = 350
 WIDTH = 350
@@ -88,14 +89,14 @@ root.title(f"screen-shawty {VERSION}")
 root.geometry(f"{WIDTH}x{HEIGHT}")
 
 app = tk.Frame(root)
-app.pack(expand=True, fill='both')
+app.pack(expand = True, fill = 'both')
 
 toggle_button = tk.Button(app,
-    text="Start", bg='green', 
-    font=(1), command=start_stop
+    text = "Start", bg = 'green',
+    font = (1), command = start_stop
     )
 
-toggle_button.pack(expand=True, fill='both')
+toggle_button.pack(expand = True, fill = 'both')
 
 root.after(POLL_DELAY, shot_loop)
 root.mainloop()
