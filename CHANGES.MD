@@ -1,6 +1,8 @@
 Check the [README](README.MD) for more!
+
 ## 0.02b (July 01, 2019)
   - Fixed a bug that causes partial image capture on Windows when display scaling is above 100%.
+  - Added Windows executable file.
 
 ## 0.01b (June 30, 2019)
 
