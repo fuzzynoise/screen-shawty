@@ -3,6 +3,7 @@
 # Filthy Windows casual.
 /Scripts/*
 /Libs/*
+/Include/
 
 # *nix
 /bin/*

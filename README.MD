@@ -10,6 +10,11 @@ My girlfriend got a video game during a certain summer sale. Unfortunately, the 
 
 [Return to top](#screen-shawty)
 ### Install
+
+# Windows
+Download the [Windows .exe file](screen-shawty.exe)
+
+# Unix-like / Developers
 You will need to have Python3 installed. It will be helpful to have pip installed as well.
 ```
 git clone https://github.com/fuzzynoise/screen-shawty.git
