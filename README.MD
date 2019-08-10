@@ -11,7 +11,7 @@ My girlfriend got a video game during a certain summer sale. Unfortunately, the 
 [Return to top](#screen-shawty)
 ### Install
 
-# Windows
+#### Windows
   - Download the [Windows .exe file](https://github.com/fuzzynoise/screen-shawty/raw/master/screen-shawty.exe)
 
   - Verify it?
@@ -23,7 +23,7 @@ Hash
 9E97652FED28AF69CA2F4F25E52782C493C06FEA696D72D48695A6D215D76DAC
 ```
   - Try it out.
-# Unix-like / Developers
+#### Unix-like / Developers
 You will need to have Python3 installed. It will be helpful to have pip installed as well.
 ```
 git clone https://github.com/fuzzynoise/screen-shawty.git
