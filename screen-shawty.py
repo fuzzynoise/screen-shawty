@@ -14,7 +14,7 @@ S           .'|                     _     _   .-.          .-
            '---'   '---'`--'  `"          `'-'  '..'
 '''
 #################
-
+import tkinter as tk
 import keyboard
 
 from sys import platform
@@ -31,9 +31,23 @@ if platform == 'win32':
     user32.SetProcessDPIAware()
 
 from PIL import ImageGrab
-import tkinter as tk
 
 #################
+
+'''
+Takes a Path object or defaults to a file named sshawty.conf
+in the same directory as the application. Parses the file and
+sets button color, save path, locale/language and that kinda junk.
+'''
+def parse_config(config = Path('./sshawty.conf')):
+    config = config
+    if config.exists():
+        pass
+    else:
+        try:
+            config.mkdir(parents = True, exist_ok = True)
+        except Exception as e:
+            print(e)
 
 def start_stop(ON = 'green', OFF = 'red'):
     global is_running
@@ -49,7 +63,7 @@ def take_screen_shot():
     # time() returns a float, but we need to use it in a filename
     current_time = str(time()).replace('.','_')
 
-    # Literally ~/Pictures/ (we'll see if it exists later...)
+    # Literally ~/Pictures/
     picture_dir = Path.home().joinpath('Pictures')
 
     # State of the art error handling!
@@ -64,7 +78,7 @@ def take_screen_shot():
     screen_shot = ImageGrab.grab()
     screen_shot.save(save_path)
 
-    # We sleep here not to be lazy but to anticipate button_up
+    # We sleep here to allow user to release print screen
     sleep(0.2)
 
 def shot_loop():
@@ -75,13 +89,12 @@ def shot_loop():
 
 #################
 
-VERSION = '0.03b' # TODO: __init__
+VERSION = '0.1' # TODO: __init__
 POLL_DELAY = 150 # ~6.66 polls for keyboard per second.
-
-is_running = False # Is the app polling keyboard input?
-
 HEIGHT = 350
 WIDTH = 350
+
+is_running = False # Is the app polling keyboard input?
 
 main_frame = tk.Tk()
 
@@ -93,8 +106,7 @@ app.pack(expand = True, fill = 'both')
 
 toggle_button = tk.Button(
     app, text = "Start", bg = 'green',
-    font = (1), command = start_stop
-    )
+    font = (1), command = start_stop)
 
 toggle_button.pack(expand = True, fill = 'both')
 

@@ -8,6 +8,9 @@
 ### Overview
 My girlfriend got a video game during a certain summer sale. Unfortunately, the game has no built-in screenshot feature. Using print screen and pasting the contents of the clipboard into an image editor is not convenient for her. Hence, screen-shawty.
 
+As it turns out, this works well for instant local capture of screenshots of
+any application that does not have this built-in functionality.
+
 [Return to top](#screen-shawty)
 ### Install
 
