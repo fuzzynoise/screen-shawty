@@ -13,8 +13,8 @@ My girlfriend got a video game during a certain summer sale. Unfortunately, the 
 
 #### Windows
   - Download the [Windows .exe file](https://github.com/fuzzynoise/screen-shawty/raw/master/screen-shawty.exe)
-
-  - Verify it? Like via hash and a right-click context-menu virus scan?
+  - Scan the file for malware using the right-click context menu in Windows.
+  - Verify it?
 ```
 > Get-FileHash .\screen-shawty.exe -Algorithm SHA256 | Select-Object Hash
 
@@ -23,8 +23,6 @@ Hash
 9E97652FED28AF69CA2F4F25E52782C493C06FEA696D72D48695A6D215D76DAC
 ```
   - Try it out.
-
-If you get a "Search for app in the Store" dialog on Windows10: press Yes or No. It doesn't seem to matter which you press, screen-shawty will still launch and function as expected.
 #### Unix-like / Developers
 You will need to have Python3 installed. It will be helpful to have pip installed as well.
 ```
@@ -32,9 +30,14 @@ git clone https://github.com/fuzzynoise/screen-shawty.git
 cd screen-shawty
 pip install --user -r requirements.txt
 ```
+If you want to build an exe, currently they're built for Windows using auto-py-to-exe and you can set that up with:
+```
+pip install auto-py-to-exe
+auto-py-to-exe
+```
 [Return to top](#screen-shawty)
 ### Running it
-Either double-click the screen-shawty.py file or run it from CLI with
+Either double-click the executable/screen-shawty.py file or run it from CLI with
 ```
 python screen-shawty.py
 ```
@@ -53,6 +56,7 @@ Select Display.
 Look for Scale and Layout.
 Set it to 100%.
 ```
+  - If you get a "Search for app in the Store" dialog on Windows10: press Yes or No. It doesn't seem to matter which you press, screen-shawty will still launch and function as expected.
 
 [Return to top](#screen-shawty)
 ### Troubles with the app
