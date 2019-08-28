@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #################
-r'''
+r'''eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 S           .'|                     _     _   .-.          .-
  C         <  |               /\    \\   //  .|\ \        / /
   R         | |             __`\\  //\\ // .' |_\ \      / /
@@ -11,8 +11,7 @@ S           .'|                     _     _   .-.          .-
   .'.'| |//| |     | |  .'.''| |          |  |     \  /
 .'.'.-'  / | |     | | / /   | |_         |  '.'   / /
 .'   \_.'  | '.    | '.\ \._,\ '/         |   /|`-' /
-           '---'   '---'`--'  `"          `'-'  '..'
-'''
+           '---'   '---'`--'  `"          `'-'  '..'''
 #################
 import tkinter as tk
 import keyboard
@@ -89,12 +88,13 @@ def shot_loop():
 
 #################
 
-VERSION = '0.1' # TODO: __init__
+VERSION = '0.2' # TODO: __init__
 POLL_DELAY = 150 # ~6.66 polls for keyboard per second.
 HEIGHT = 350
 WIDTH = 350
 
 is_running = False # Is the app polling keyboard input?
+
 
 main_frame = tk.Tk()
 
