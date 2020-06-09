@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+is_running = False # Is the app polling keyboard input?
+
 #################
 r'''
 S           .'|                     _     _   .-.          .-
@@ -77,8 +79,6 @@ def shot_loop():
 
 VERSION = '0.03b' # TODO: __init__
 POLL_DELAY = 150 # ~6.66 polls for keyboard per second.
-
-is_running = False # Is the app polling keyboard input?
 
 HEIGHT = 350
 WIDTH = 350
