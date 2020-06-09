@@ -38,7 +38,13 @@ Either double-click the screen-shawty.py file or run it from CLI with
 ```
 python screen-shawty.py
 ```
-Once the application is running, press the green "Start" button to begin the recording. To take a screenshot, press the print screen key on your keyboard as normal. Images will be automatically saved to `~/Pictures/Screen Shot TIMESTAMP.png` (where `~` represents your home directory). To stop the application and return print screen key function to normal, press the red "Stop" button.
+Once the application is running, press the "Start" button to begin the recording.
+
+To take a screenshot, press the print screen key on your keyboard as normal.
+
+Images will be automatically saved to `~/Pictures/Screen Shot TIMESTAMP.png` (where `~` represents your home directory).
+
+To stop the application and return print screen key function to normal, press the "Stop" button.
 
 [Return to top](#screen-shawty)
 ### Known bugs
